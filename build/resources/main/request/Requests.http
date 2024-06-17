@@ -1,0 +1,33 @@
+##Registramos usuario
+POST http://localhost:8080/api/v2/employee/register
+Content-Type: application/json
+
+{
+  "dni": "0123456789",
+  "firstName": "Juan Felipe",
+  "lastName": "Macias Ventura",
+  "email": "juanmacias@gmail.com"
+}
+
+###
+
+##Listamos tipos de vacunas registradas
+GET http://localhost:8080/api/v2/vaccine/index
+Accept: application/json
+
+###
+
+##Obtenemos lista de usuarios
+GET http://localhost:8080/api/v2/employee/employees?page=0&limit=50
+Accept: application/json
+
+###
+
+##Eliminamos usuario
+DELETE http://localhost:8080/api/v2/employee/delete/1
+Accept: application/json
+###
+
+###
+##Usuario por id
+GET http://localhost:8080/api/v2/employee/employee/1
