@@ -1,0 +1,713 @@
+2024-08-18T20:08:06.453-04:00  INFO 17474 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Starting InventarioCovidApplication using Java 21.0.4 with PID 17474 (/home/felipe/Github/covidInventory/build/classes/java/main started by felipe in /home/felipe/Github/covidInventory)
+2024-08-18T20:08:06.457-04:00  INFO 17474 --- [restartedMain] c.i.covid.InventarioCovidApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-08-18T20:08:06.483-04:00  INFO 17474 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-18T20:08:06.492-04:00  INFO 17474 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file '/home/felipe/Github/covidInventory/compose.yaml'
+2024-08-18T20:08:06.632-04:00 ERROR 17474 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.docker.compose.core.DockerNotRunningException: Docker is not running
+	at org.springframework.boot.docker.compose.core.DockerCli$DockerCommands.getDockerCommand(DockerCli.java:146) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.core.DockerCli$DockerCommands.<init>(DockerCli.java:129) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.core.DockerCli.lambda$new$0(DockerCli.java:65) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1228) ~[na:na]
+	at org.springframework.boot.docker.compose.core.DockerCli.<init>(DockerCli.java:64) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.core.DockerCompose.get(DockerCompose.java:92) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.getDockerCompose(DockerComposeLifecycleManager.java:154) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.start(DockerComposeLifecycleManager.java:110) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:53) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:35) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.contextLoaded(EventPublishingRunListener.java:98) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextLoaded$4(SpringApplicationRunListeners.java:72) ~[spring-boot-3.2.1.jar:3.2.1]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplicationRunListeners.contextLoaded(SpringApplicationRunListeners.java:72) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:440) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347) ~[spring-boot-3.2.1.jar:3.2.1]
+	at com.inventario.covid.InventarioCovidApplication.main(InventarioCovidApplication.java:12) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.1.jar:3.2.1]
+Caused by: org.springframework.boot.docker.compose.core.ProcessExitException: 'docker version --format {{.Client.Version}}' failed with exit code 1.
+
+Stdout:
+26.1.5-ce
+
+
+Stderr:
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+
+	at org.springframework.boot.docker.compose.core.ProcessRunner.run(ProcessRunner.java:96) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.core.ProcessRunner.run(ProcessRunner.java:74) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	at org.springframework.boot.docker.compose.core.DockerCli$DockerCommands.getDockerCommand(DockerCli.java:135) ~[spring-boot-docker-compose-3.2.1.jar:3.2.1]
+	... 28 common frames omitted
+
+2024-08-18T20:09:49.621-04:00  INFO 18594 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Starting InventarioCovidApplication using Java 21.0.4 with PID 18594 (/home/felipe/Github/covidInventory/build/classes/java/main started by felipe in /home/felipe/Github/covidInventory)
+2024-08-18T20:09:49.622-04:00  INFO 18594 --- [restartedMain] c.i.covid.InventarioCovidApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-08-18T20:09:49.638-04:00  INFO 18594 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-18T20:09:49.645-04:00  INFO 18594 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file '/home/felipe/Github/covidInventory/compose.yaml'
+2024-08-18T20:09:49.897-04:00  INFO 18594 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-08-18T20:09:50.178-04:00  INFO 18594 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-18T20:09:50.206-04:00  INFO 18594 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+2024-08-18T20:09:50.575-04:00  INFO 18594 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-18T20:09:50.581-04:00  INFO 18594 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-18T20:09:50.581-04:00  INFO 18594 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-18T20:09:50.602-04:00  INFO 18594 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-18T20:09:50.602-04:00  INFO 18594 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 702 ms
+2024-08-18T20:09:50.612-04:00 DEBUG 18594 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-08-18T20:09:50.612-04:00 DEBUG 18594 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-08-18T20:09:50.691-04:00  INFO 18594 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-18T20:09:50.717-04:00  INFO 18594 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-18T20:09:50.729-04:00  INFO 18594 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-18T20:09:50.815-04:00  INFO 18594 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-18T20:09:50.827-04:00  INFO 18594 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-18T20:09:50.906-04:00  INFO 18594 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2192cbe2
+2024-08-18T20:09:50.907-04:00  INFO 18594 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-18T20:09:51.387-04:00  INFO 18594 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-18T20:09:51.393-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2024-08-18T20:09:51.396-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.396-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2024-08-18T20:09:51.396-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2024-08-18T20:09:51.397-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.397-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2024-08-18T20:09:51.397-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2024-08-18T20:09:51.397-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.397-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2024-08-18T20:09:51.397-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2024-08-18T20:09:51.398-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.398-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2024-08-18T20:09:51.398-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2024-08-18T20:09:51.398-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.398-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee" does not exist, skipping
+2024-08-18T20:09:51.399-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2024-08-18T20:09:51.399-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.399-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_role" does not exist, skipping
+2024-08-18T20:09:51.399-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2024-08-18T20:09:51.399-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.399-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_vaccine" does not exist, skipping
+2024-08-18T20:09:51.399-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.role cascade
+2024-08-18T20:09:51.399-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.399-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "role" does not exist, skipping
+2024-08-18T20:09:51.399-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2024-08-18T20:09:51.400-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:09:51.400-04:00  WARN 18594 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "vaccine" does not exist, skipping
+2024-08-18T20:09:51.403-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : create table public.employee (birth_date date, registration_complete boolean default false not null, vaccine_application boolean default false not null, id bigserial not null, address varchar(50), cell_phone varchar(8), dni varchar(10) not null unique, email varchar(50) not null, first_name varchar(70) not null, last_name varchar(70) not null, password varchar(255) not null, username varchar(40) not null unique, primary key (id))
+2024-08-18T20:09:51.417-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_role (employee_id bigint not null, id bigserial not null, role_id bigint not null, primary key (id))
+2024-08-18T20:09:51.420-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_vaccine (application_date date, applied_dose integer, employee_id bigint not null, id bigserial not null, vaccine_id bigint not null, primary key (id))
+2024-08-18T20:09:51.423-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : create table public.role (id bigserial not null, role_name varchar(13) not null unique, primary key (id))
+2024-08-18T20:09:51.426-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : create table public.vaccine (dosses integer, id bigserial not null, vaccine_type varchar(30), primary key (id))
+2024-08-18T20:09:51.429-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FKo7rvk7ejtx29vru9cyhf7o68a foreign key (employee_id) references public.employee
+2024-08-18T20:09:51.435-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FK7jol9jrbtlt6ctiehegh6besp foreign key (role_id) references public.role
+2024-08-18T20:09:51.438-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKn9flg2v6mhpryqjmf6ftyf2c5 foreign key (employee_id) references public.employee
+2024-08-18T20:09:51.440-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKgbcyxesx6vuma0v5im5q72e07 foreign key (vaccine_id) references public.vaccine
+2024-08-18T20:09:51.443-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Sputnik')
+2024-08-18T20:09:51.444-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'AstraZeneca')
+2024-08-18T20:09:51.446-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Pfizer')
+2024-08-18T20:09:51.447-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (1,'Jhonson&Jhonson')
+2024-08-18T20:09:51.448-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Administrator')
+2024-08-18T20:09:51.449-04:00 DEBUG 18594 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Employee')
+2024-08-18T20:09:51.454-04:00  INFO 18594 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T20:09:51.684-04:00  WARN 18594 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-18T20:09:51.741-04:00 TRACE 18594 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.EmployeeController:
+	{POST [/api/v2/employee/register]}: createEmployee(EmployeeRegisterRequest,BindingResult)
+	{PUT [/api/v2/employee/update/{id}]}: updateEmployeeForAdmin(EmployeeUpdateRequest,BindingResult,Long)
+	{GET [/api/v2/employee/employees]}: indexEmployees(int,int)
+	{DELETE [/api/v2/employee/delete/{id}]}: deleteEmployeeRegistered(Long)
+	{GET [/api/v2/employee/employee/{id}]}: getEmployeeById(Long)
+2024-08-18T20:09:51.746-04:00 TRACE 18594 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.VaccineController:
+	{GET [/api/v2/vaccine/index]}: index()
+2024-08-18T20:09:51.747-04:00 TRACE 18594 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-08-18T20:09:51.748-04:00 DEBUG 18594 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2024-08-18T20:09:51.753-04:00 DEBUG 18594 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-08-18T20:09:51.786-04:00 TRACE 18594 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-08-18T20:09:51.793-04:00 TRACE 18594 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-18T20:09:51.793-04:00 TRACE 18594 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-18T20:09:51.793-04:00 DEBUG 18594 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-18T20:09:51.812-04:00 DEBUG 18594 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-18T20:09:51.828-04:00 DEBUG 18594 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-18T20:09:51.885-04:00  INFO 18594 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-18T20:09:51.905-04:00  INFO 18594 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-18T20:09:51.910-04:00  INFO 18594 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Started InventarioCovidApplication in 2.44 seconds (process running for 7.72)
+2024-08-18T20:13:32.925-04:00  INFO 18594 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T20:13:32.925-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2024-08-18T20:13:32.929-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2024-08-18T20:13:32.931-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2024-08-18T20:13:32.932-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2024-08-18T20:13:32.933-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2024-08-18T20:13:32.935-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2024-08-18T20:13:32.937-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2024-08-18T20:13:32.939-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.role cascade
+2024-08-18T20:13:32.940-04:00 DEBUG 18594 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2024-08-18T20:13:32.943-04:00  INFO 18594 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-18T20:13:32.944-04:00  INFO 18594 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-18T20:13:36.416-04:00  INFO 20572 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Starting InventarioCovidApplication using Java 21.0.4 with PID 20572 (/home/felipe/Github/covidInventory/build/classes/java/main started by felipe in /home/felipe/Github/covidInventory)
+2024-08-18T20:13:36.417-04:00  INFO 20572 --- [restartedMain] c.i.covid.InventarioCovidApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-08-18T20:13:36.434-04:00  INFO 20572 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-18T20:13:36.442-04:00  INFO 20572 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file '/home/felipe/Github/covidInventory/compose.yaml'
+2024-08-18T20:13:36.670-04:00  INFO 20572 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-08-18T20:13:36.918-04:00  INFO 20572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-18T20:13:36.943-04:00  INFO 20572 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2024-08-18T20:13:37.192-04:00  INFO 20572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-18T20:13:37.198-04:00  INFO 20572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-18T20:13:37.198-04:00  INFO 20572 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-18T20:13:37.213-04:00  INFO 20572 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-18T20:13:37.213-04:00  INFO 20572 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 540 ms
+2024-08-18T20:13:37.221-04:00 DEBUG 20572 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-08-18T20:13:37.221-04:00 DEBUG 20572 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-08-18T20:13:37.281-04:00  INFO 20572 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-18T20:13:37.298-04:00  INFO 20572 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-18T20:13:37.309-04:00  INFO 20572 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-18T20:13:37.384-04:00  INFO 20572 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-18T20:13:37.394-04:00  INFO 20572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-18T20:13:37.458-04:00  INFO 20572 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@633afa4d
+2024-08-18T20:13:37.459-04:00  INFO 20572 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-18T20:13:37.859-04:00  INFO 20572 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-18T20:13:37.864-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2024-08-18T20:13:37.865-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.865-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2024-08-18T20:13:37.865-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2024-08-18T20:13:37.866-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.866-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2024-08-18T20:13:37.866-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2024-08-18T20:13:37.866-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.866-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2024-08-18T20:13:37.866-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2024-08-18T20:13:37.866-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.867-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2024-08-18T20:13:37.867-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2024-08-18T20:13:37.867-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.867-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee" does not exist, skipping
+2024-08-18T20:13:37.867-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2024-08-18T20:13:37.867-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.867-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_role" does not exist, skipping
+2024-08-18T20:13:37.867-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2024-08-18T20:13:37.867-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.867-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_vaccine" does not exist, skipping
+2024-08-18T20:13:37.867-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.role cascade
+2024-08-18T20:13:37.868-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.868-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "role" does not exist, skipping
+2024-08-18T20:13:37.868-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2024-08-18T20:13:37.868-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:13:37.868-04:00  WARN 20572 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "vaccine" does not exist, skipping
+2024-08-18T20:13:37.870-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : create table public.employee (birth_date date, registration_complete boolean default false not null, vaccine_application boolean default false not null, id bigserial not null, address varchar(50), cell_phone varchar(8), dni varchar(10) not null unique, email varchar(50) not null, first_name varchar(70) not null, last_name varchar(70) not null, password varchar(255) not null, username varchar(40) not null unique, primary key (id))
+2024-08-18T20:13:37.879-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_role (employee_id bigint not null, id bigserial not null, role_id bigint not null, primary key (id))
+2024-08-18T20:13:37.881-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_vaccine (application_date date, applied_dose integer, employee_id bigint not null, id bigserial not null, vaccine_id bigint not null, primary key (id))
+2024-08-18T20:13:37.884-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : create table public.role (id bigserial not null, role_name varchar(13) not null unique, primary key (id))
+2024-08-18T20:13:37.889-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : create table public.vaccine (dosses integer, id bigserial not null, vaccine_type varchar(30), primary key (id))
+2024-08-18T20:13:37.892-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FKo7rvk7ejtx29vru9cyhf7o68a foreign key (employee_id) references public.employee
+2024-08-18T20:13:37.894-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FK7jol9jrbtlt6ctiehegh6besp foreign key (role_id) references public.role
+2024-08-18T20:13:37.895-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKn9flg2v6mhpryqjmf6ftyf2c5 foreign key (employee_id) references public.employee
+2024-08-18T20:13:37.897-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKgbcyxesx6vuma0v5im5q72e07 foreign key (vaccine_id) references public.vaccine
+2024-08-18T20:13:37.899-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Sputnik')
+2024-08-18T20:13:37.900-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'AstraZeneca')
+2024-08-18T20:13:37.903-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Pfizer')
+2024-08-18T20:13:37.904-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (1,'Jhonson&Jhonson')
+2024-08-18T20:13:37.905-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Administrator')
+2024-08-18T20:13:37.906-04:00 DEBUG 20572 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Employee')
+2024-08-18T20:13:37.909-04:00  INFO 20572 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T20:13:38.090-04:00  WARN 20572 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-18T20:13:38.124-04:00 TRACE 20572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.EmployeeController:
+	{POST [/api/v2/employee/register]}: createEmployee(EmployeeRegisterRequest,BindingResult)
+	{PUT [/api/v2/employee/update/{id}]}: updateEmployeeForAdmin(EmployeeUpdateRequest,BindingResult,Long)
+	{GET [/api/v2/employee/employees]}: indexEmployees(int,int)
+	{DELETE [/api/v2/employee/delete/{id}]}: deleteEmployeeRegistered(Long)
+	{GET [/api/v2/employee/employee/{id}]}: getEmployeeById(Long)
+2024-08-18T20:13:38.128-04:00 TRACE 20572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.VaccineController:
+	{GET [/api/v2/vaccine/index]}: index()
+2024-08-18T20:13:38.132-04:00 TRACE 20572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-08-18T20:13:38.133-04:00 DEBUG 20572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2024-08-18T20:13:38.137-04:00 DEBUG 20572 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-08-18T20:13:38.165-04:00 TRACE 20572 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-08-18T20:13:38.170-04:00 TRACE 20572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-18T20:13:38.170-04:00 TRACE 20572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-18T20:13:38.170-04:00 DEBUG 20572 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-18T20:13:38.185-04:00 DEBUG 20572 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-18T20:13:38.198-04:00 DEBUG 20572 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-18T20:13:38.244-04:00  INFO 20572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-18T20:13:38.257-04:00  INFO 20572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-18T20:13:38.261-04:00  INFO 20572 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Started InventarioCovidApplication in 1.999 seconds (process running for 2.275)
+2024-08-18T20:19:20.983-04:00  INFO 20572 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T20:19:20.983-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2024-08-18T20:19:20.985-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2024-08-18T20:19:20.986-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2024-08-18T20:19:20.988-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2024-08-18T20:19:20.989-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2024-08-18T20:19:20.991-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2024-08-18T20:19:20.993-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2024-08-18T20:19:20.994-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.role cascade
+2024-08-18T20:19:20.996-04:00 DEBUG 20572 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2024-08-18T20:19:20.999-04:00  INFO 20572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-18T20:19:21.000-04:00  INFO 20572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-18T20:19:22.086-04:00  INFO 23356 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Starting InventarioCovidApplication using Java 21.0.4 with PID 23356 (/home/felipe/Github/covidInventory/build/classes/java/main started by felipe in /home/felipe/Github/covidInventory)
+2024-08-18T20:19:22.087-04:00  INFO 23356 --- [restartedMain] c.i.covid.InventarioCovidApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-08-18T20:19:22.103-04:00  INFO 23356 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-18T20:19:22.110-04:00  INFO 23356 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file '/home/felipe/Github/covidInventory/compose.yaml'
+2024-08-18T20:19:22.329-04:00  INFO 23356 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-08-18T20:19:22.568-04:00  INFO 23356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-18T20:19:22.592-04:00  INFO 23356 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2024-08-18T20:19:22.832-04:00  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-18T20:19:22.838-04:00  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-18T20:19:22.838-04:00  INFO 23356 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-18T20:19:22.854-04:00  INFO 23356 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-18T20:19:22.854-04:00  INFO 23356 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 522 ms
+2024-08-18T20:19:22.862-04:00 DEBUG 23356 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-08-18T20:19:22.863-04:00 DEBUG 23356 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-08-18T20:19:22.925-04:00  INFO 23356 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-18T20:19:22.943-04:00  INFO 23356 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-18T20:19:22.954-04:00  INFO 23356 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-18T20:19:23.030-04:00  INFO 23356 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-18T20:19:23.043-04:00  INFO 23356 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-18T20:19:23.112-04:00  INFO 23356 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3504f35a
+2024-08-18T20:19:23.113-04:00  INFO 23356 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-18T20:19:23.543-04:00  INFO 23356 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-18T20:19:23.552-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2024-08-18T20:19:23.554-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.554-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2024-08-18T20:19:23.554-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2024-08-18T20:19:23.555-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.555-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2024-08-18T20:19:23.555-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2024-08-18T20:19:23.556-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.556-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2024-08-18T20:19:23.556-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2024-08-18T20:19:23.557-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.557-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2024-08-18T20:19:23.557-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2024-08-18T20:19:23.557-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.557-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee" does not exist, skipping
+2024-08-18T20:19:23.557-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2024-08-18T20:19:23.558-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.558-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_role" does not exist, skipping
+2024-08-18T20:19:23.558-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2024-08-18T20:19:23.558-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.558-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_vaccine" does not exist, skipping
+2024-08-18T20:19:23.558-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.role cascade
+2024-08-18T20:19:23.558-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.558-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "role" does not exist, skipping
+2024-08-18T20:19:23.558-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2024-08-18T20:19:23.558-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:19:23.558-04:00  WARN 23356 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "vaccine" does not exist, skipping
+2024-08-18T20:19:23.561-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : create table public.employee (birth_date date, registration_complete boolean default false not null, vaccine_application boolean default false not null, id bigserial not null, address varchar(50), cell_phone varchar(8), dni varchar(10) not null unique, email varchar(50) not null, first_name varchar(70) not null, last_name varchar(70) not null, password varchar(255) not null, username varchar(40) not null unique, primary key (id))
+2024-08-18T20:19:23.568-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_role (employee_id bigint not null, id bigserial not null, role_id bigint not null, primary key (id))
+2024-08-18T20:19:23.570-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_vaccine (application_date date, applied_dose integer, employee_id bigint not null, id bigserial not null, vaccine_id bigint not null, primary key (id))
+2024-08-18T20:19:23.573-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : create table public.role (id bigserial not null, role_name varchar(13) not null unique, primary key (id))
+2024-08-18T20:19:23.576-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : create table public.vaccine (dosses integer, id bigserial not null, vaccine_type varchar(30), primary key (id))
+2024-08-18T20:19:23.579-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FKo7rvk7ejtx29vru9cyhf7o68a foreign key (employee_id) references public.employee
+2024-08-18T20:19:23.581-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FK7jol9jrbtlt6ctiehegh6besp foreign key (role_id) references public.role
+2024-08-18T20:19:23.582-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKn9flg2v6mhpryqjmf6ftyf2c5 foreign key (employee_id) references public.employee
+2024-08-18T20:19:23.584-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKgbcyxesx6vuma0v5im5q72e07 foreign key (vaccine_id) references public.vaccine
+2024-08-18T20:19:23.587-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Sputnik')
+2024-08-18T20:19:23.588-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'AstraZeneca')
+2024-08-18T20:19:23.590-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Pfizer')
+2024-08-18T20:19:23.591-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (1,'Jhonson&Jhonson')
+2024-08-18T20:19:23.592-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Administrator')
+2024-08-18T20:19:23.593-04:00 DEBUG 23356 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Employee')
+2024-08-18T20:19:23.596-04:00  INFO 23356 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T20:19:23.764-04:00  WARN 23356 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-18T20:19:23.798-04:00 TRACE 23356 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.EmployeeController:
+	{POST [/api/v2/employee/register]}: createEmployee(EmployeeRegisterRequest,BindingResult)
+	{PUT [/api/v2/employee/update/{id}]}: updateEmployeeForAdmin(EmployeeUpdateRequest,BindingResult,Long)
+	{GET [/api/v2/employee/employees]}: indexEmployees(int,int)
+	{DELETE [/api/v2/employee/delete/{id}]}: deleteEmployeeRegistered(Long)
+	{GET [/api/v2/employee/employee/{id}]}: getEmployeeById(Long)
+2024-08-18T20:19:23.803-04:00 TRACE 23356 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.VaccineController:
+	{GET [/api/v2/vaccine/index]}: index()
+2024-08-18T20:19:23.804-04:00 TRACE 23356 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-08-18T20:19:23.807-04:00 DEBUG 23356 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2024-08-18T20:19:23.812-04:00 DEBUG 23356 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-08-18T20:19:23.840-04:00 TRACE 23356 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-08-18T20:19:23.845-04:00 TRACE 23356 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-18T20:19:23.845-04:00 TRACE 23356 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-18T20:19:23.845-04:00 DEBUG 23356 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-18T20:19:23.861-04:00 DEBUG 23356 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-18T20:19:23.876-04:00 DEBUG 23356 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-18T20:19:23.925-04:00  INFO 23356 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-18T20:19:23.939-04:00  INFO 23356 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-18T20:19:23.943-04:00  INFO 23356 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Started InventarioCovidApplication in 2.016 seconds (process running for 2.296)
+2024-08-18T20:19:31.819-04:00  INFO 23356 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-18T20:19:31.819-04:00  INFO 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-18T20:19:31.819-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@4c9ec856
+2024-08-18T20:19:31.819-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@5495fb24
+2024-08-18T20:19:31.819-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@48ca8a90
+2024-08-18T20:19:31.820-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2024-08-18T20:19:31.820-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2024-08-18T20:19:31.820-04:00 DEBUG 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2024-08-18T20:19:31.820-04:00  INFO 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-18T20:19:31.826-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/v2/vaccine/index", parameters={}, headers={accept:[application/json], user-agent:[IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1], accept-encoding:[br, deflate, gzip, x-gzip], host:[localhost:8080], content-length:[0]} in DispatcherServlet 'dispatcherServlet'
+2024-08-18T20:19:31.833-04:00 TRACE 23356 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.inventario.covid.web.controller.VaccineController#index()
+2024-08-18T20:19:31.839-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: []
+2024-08-18T20:19:31.883-04:00 DEBUG 23356 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select ve1_0.id,ve1_0.dosses,ve1_0.vaccine_type from public.vaccine ve1_0
+2024-08-18T20:19:31.899-04:00 DEBUG 23356 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2024-08-18T20:19:31.899-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[VaccineEntity(id=1, typeName=Sputnik, doseApplication=2), VaccineEntity(id=2, typeName=AstraZeneca, doseApplication=2), VaccineEntity(id=3, typeName=Pfizer, doseApplication=2), VaccineEntity(id=4, typeName=Jhonson&Jhonson, doseApplication=1)]]
+2024-08-18T20:19:31.906-04:00 TRACE 23356 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-08-18T20:19:31.906-04:00 TRACE 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-08-18T20:19:31.907-04:00 DEBUG 23356 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={Content-Type:[application/json], Transfer-Encoding:[chunked], Date:[Mon, 19 Aug 2024 00:19:31 GMT]}
+2024-08-18T20:19:42.677-04:00  INFO 23356 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T20:19:42.677-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2024-08-18T20:19:42.679-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2024-08-18T20:19:42.681-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2024-08-18T20:19:42.682-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2024-08-18T20:19:42.683-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2024-08-18T20:19:42.685-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2024-08-18T20:19:42.686-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2024-08-18T20:19:42.688-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.role cascade
+2024-08-18T20:19:42.689-04:00 DEBUG 23356 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2024-08-18T20:19:42.693-04:00  INFO 23356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-18T20:19:42.694-04:00  INFO 23356 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-18T20:34:06.012-04:00  INFO 25225 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Starting InventarioCovidApplication using Java 21.0.4 with PID 25225 (/home/felipe/Github/covidInventory/build/classes/java/main started by felipe in /home/felipe/Github/covidInventory)
+2024-08-18T20:34:06.013-04:00  INFO 25225 --- [restartedMain] c.i.covid.InventarioCovidApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-08-18T20:34:06.033-04:00  INFO 25225 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-18T20:34:06.040-04:00  INFO 25225 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file '/home/felipe/Github/covidInventory/compose.yaml'
+2024-08-18T20:34:06.262-04:00  INFO 25225 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2024-08-18T20:34:06.501-04:00  INFO 25225 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-18T20:34:06.525-04:00  INFO 25225 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2024-08-18T20:34:06.771-04:00  INFO 25225 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-18T20:34:06.776-04:00  INFO 25225 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-18T20:34:06.776-04:00  INFO 25225 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-18T20:34:06.791-04:00  INFO 25225 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-18T20:34:06.791-04:00  INFO 25225 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 526 ms
+2024-08-18T20:34:06.799-04:00 DEBUG 25225 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-08-18T20:34:06.799-04:00 DEBUG 25225 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-08-18T20:34:06.861-04:00  INFO 25225 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-18T20:34:06.877-04:00  INFO 25225 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-18T20:34:06.888-04:00  INFO 25225 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-18T20:34:06.963-04:00  INFO 25225 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-18T20:34:06.972-04:00  INFO 25225 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-18T20:34:07.034-04:00  INFO 25225 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e50e574
+2024-08-18T20:34:07.035-04:00  INFO 25225 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-18T20:34:07.437-04:00  INFO 25225 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-18T20:34:07.443-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2024-08-18T20:34:07.444-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.444-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2024-08-18T20:34:07.444-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2024-08-18T20:34:07.445-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.445-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2024-08-18T20:34:07.445-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2024-08-18T20:34:07.445-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.445-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2024-08-18T20:34:07.445-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2024-08-18T20:34:07.446-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.446-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2024-08-18T20:34:07.446-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2024-08-18T20:34:07.446-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.446-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee" does not exist, skipping
+2024-08-18T20:34:07.446-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2024-08-18T20:34:07.446-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.446-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_role" does not exist, skipping
+2024-08-18T20:34:07.446-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2024-08-18T20:34:07.446-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.446-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_vaccine" does not exist, skipping
+2024-08-18T20:34:07.447-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.role cascade
+2024-08-18T20:34:07.447-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.447-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "role" does not exist, skipping
+2024-08-18T20:34:07.447-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2024-08-18T20:34:07.447-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-08-18T20:34:07.447-04:00  WARN 25225 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "vaccine" does not exist, skipping
+2024-08-18T20:34:07.450-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : create table public.employee (birth_date date, registration_complete boolean default false not null, vaccine_application boolean default false not null, id bigserial not null, address varchar(50), cell_phone varchar(8), dni varchar(10) not null unique, email varchar(50) not null, first_name varchar(70) not null, last_name varchar(70) not null, password varchar(255) not null, username varchar(40) not null unique, primary key (id))
+2024-08-18T20:34:07.457-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_role (employee_id bigint not null, id bigserial not null, role_id bigint not null, primary key (id))
+2024-08-18T20:34:07.459-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_vaccine (application_date date, applied_dose integer, employee_id bigint not null, id bigserial not null, vaccine_id bigint not null, primary key (id))
+2024-08-18T20:34:07.462-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : create table public.role (id bigserial not null, role_name varchar(13) not null unique, primary key (id))
+2024-08-18T20:34:07.465-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : create table public.vaccine (dosses integer, id bigserial not null, vaccine_type varchar(30), primary key (id))
+2024-08-18T20:34:07.467-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FKo7rvk7ejtx29vru9cyhf7o68a foreign key (employee_id) references public.employee
+2024-08-18T20:34:07.469-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FK7jol9jrbtlt6ctiehegh6besp foreign key (role_id) references public.role
+2024-08-18T20:34:07.471-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKn9flg2v6mhpryqjmf6ftyf2c5 foreign key (employee_id) references public.employee
+2024-08-18T20:34:07.473-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKgbcyxesx6vuma0v5im5q72e07 foreign key (vaccine_id) references public.vaccine
+2024-08-18T20:34:07.475-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Sputnik')
+2024-08-18T20:34:07.476-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'AstraZeneca')
+2024-08-18T20:34:07.478-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Pfizer')
+2024-08-18T20:34:07.479-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (1,'Jhonson&Jhonson')
+2024-08-18T20:34:07.480-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Administrator')
+2024-08-18T20:34:07.481-04:00 DEBUG 25225 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Employee')
+2024-08-18T20:34:07.483-04:00  INFO 25225 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T20:34:07.658-04:00  WARN 25225 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-18T20:34:07.694-04:00 TRACE 25225 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.EmployeeController:
+	{POST [/api/v2/employee/register]}: createEmployee(EmployeeRegisterRequest,BindingResult)
+	{PUT [/api/v2/employee/update/{id}]}: updateEmployeeForAdmin(EmployeeUpdateRequest,BindingResult,Long)
+	{GET [/api/v2/employee/employees]}: indexEmployees(int,int)
+	{DELETE [/api/v2/employee/delete/{id}]}: deleteEmployeeRegistered(Long)
+	{GET [/api/v2/employee/employee/{id}]}: getEmployeeById(Long)
+2024-08-18T20:34:07.698-04:00 TRACE 25225 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.VaccineController:
+	{GET [/api/v2/vaccine/index]}: index()
+2024-08-18T20:34:07.699-04:00 TRACE 25225 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-08-18T20:34:07.703-04:00 DEBUG 25225 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2024-08-18T20:34:07.707-04:00 DEBUG 25225 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-08-18T20:34:07.734-04:00 TRACE 25225 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-08-18T20:34:07.738-04:00 TRACE 25225 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-18T20:34:07.738-04:00 TRACE 25225 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-18T20:34:07.738-04:00 DEBUG 25225 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-18T20:34:07.754-04:00 DEBUG 25225 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-18T20:34:07.767-04:00 DEBUG 25225 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-18T20:34:07.812-04:00  INFO 25225 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-18T20:34:07.826-04:00  INFO 25225 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-08-18T20:34:07.829-04:00  INFO 25225 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Started InventarioCovidApplication in 1.96 seconds (process running for 2.245)
+2024-08-18T20:34:13.923-04:00  INFO 25225 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-18T20:34:13.923-04:00  INFO 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-18T20:34:13.923-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@79d14ebc
+2024-08-18T20:34:13.923-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@4e181dde
+2024-08-18T20:34:13.923-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@68d054d5
+2024-08-18T20:34:13.924-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2024-08-18T20:34:13.924-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2024-08-18T20:34:13.924-04:00 DEBUG 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2024-08-18T20:34:13.924-04:00  INFO 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-18T20:34:13.928-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/v2/employee/employee/1", parameters={}, headers={user-agent:[IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1], accept-encoding:[br, deflate, gzip, x-gzip], accept:[*/*], host:[localhost:8080], content-length:[0]} in DispatcherServlet 'dispatcherServlet'
+2024-08-18T20:34:13.936-04:00 TRACE 25225 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.inventario.covid.web.controller.EmployeeController#getEmployeeById(Long)
+2024-08-18T20:34:13.944-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: [1]
+2024-08-18T20:34:13.946-04:00  INFO 25225 --- [http-nio-8080-exec-2] c.inventario.covid.config.LoggingAspect  : INIT AOP LOGGING CONTROL...
+2024-08-18T20:34:13.946-04:00  INFO 25225 --- [http-nio-8080-exec-2] c.inventario.covid.config.LoggingAspect  : Entering method: EmployeeController.getEmployeeById(..) with arguments: [1] ,Class Name:com.inventario.covid.web.controller.EmployeeController
+2024-08-18T20:34:13.963-04:00 DEBUG 25225 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select ee1_0.id,ee1_0.address,ee1_0.birth_date,ee1_0.cell_phone,ee1_0.dni,ee1_0.email,ee1_0.first_name,ee1_0.registration_complete,ee1_0.vaccine_application,ee1_0.last_name,ee1_0.password,ee1_0.username from public.employee ee1_0 where ee1_0.id=?
+2024-08-18T20:34:13.967-04:00  INFO 25225 --- [http-nio-8080-exec-2] c.i.c.web.controller.EmployeeController  : Error getting employee record with id 1: Employee record could not be found or does not exist
+
+com.inventario.covid.exceptions.UserServiceException: Employee record could not be found or does not exist
+	at com.inventario.covid.service.impl.EmployeeServiceImpl.getEmployeeByEmployeeId(EmployeeServiceImpl.java:127) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.2.jar:6.1.2]
+	at com.inventario.covid.service.impl.EmployeeServiceImpl$$SpringCGLIB$$0.getEmployeeByEmployeeId(<generated>) ~[main/:na]
+	at com.inventario.covid.web.controller.EmployeeController.getEmployeeById(EmployeeController.java:127) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.1.2.jar:6.1.2]
+	at com.inventario.covid.config.LoggingAspect.logMethodExecutionTime(LoggingAspect.java:54) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.2.jar:6.1.2]
+	at com.inventario.covid.web.controller.EmployeeController$$SpringCGLIB$$0.getEmployeeById(<generated>) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-08-18T20:34:13.972-04:00  INFO 25225 --- [http-nio-8080-exec-2] c.inventario.covid.config.LoggingAspect  : Exiting method: getEmployeeById with result: <404 NOT_FOUND Not Found,{error=Employee record could not be found or does not exist},[]> ,Class Name:com.inventario.covid.web.controller.EmployeeController
+2024-08-18T20:34:13.972-04:00  INFO 25225 --- [http-nio-8080-exec-2] c.inventario.covid.config.LoggingAspect  : FINISHED AOP LOGGING CONTROL...
+2024-08-18T20:34:13.976-04:00 DEBUG 25225 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-08-18T20:34:13.977-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=Employee record could not be found or does not exist}]
+2024-08-18T20:34:13.982-04:00 TRACE 25225 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-08-18T20:34:13.982-04:00 TRACE 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-08-18T20:34:13.982-04:00 DEBUG 25225 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={Content-Type:[application/json], Transfer-Encoding:[chunked], Date:[Mon, 19 Aug 2024 00:34:13 GMT]}
+2024-08-18T20:34:17.980-04:00 TRACE 25225 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : DELETE "/api/v2/employee/delete/1", parameters={}, headers={accept:[application/json], user-agent:[IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1], accept-encoding:[br, deflate, gzip, x-gzip], host:[localhost:8080], content-length:[0]} in DispatcherServlet 'dispatcherServlet'
+2024-08-18T20:34:17.981-04:00 TRACE 25225 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.inventario.covid.web.controller.EmployeeController#deleteEmployeeRegistered(Long)
+2024-08-18T20:34:17.981-04:00 TRACE 25225 --- [http-nio-8080-exec-5] o.s.web.method.HandlerMethod             : Arguments: [1]
+2024-08-18T20:34:17.981-04:00  INFO 25225 --- [http-nio-8080-exec-5] c.inventario.covid.config.LoggingAspect  : INIT AOP LOGGING CONTROL...
+2024-08-18T20:34:17.982-04:00  INFO 25225 --- [http-nio-8080-exec-5] c.inventario.covid.config.LoggingAspect  : Entering method: EmployeeController.deleteEmployeeRegistered(..) with arguments: [1] ,Class Name:com.inventario.covid.web.controller.EmployeeController
+2024-08-18T20:34:18.095-04:00 DEBUG 25225 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select count(*) from public.employee ee1_0 where ee1_0.id=?
+2024-08-18T20:34:18.097-04:00  INFO 25225 --- [http-nio-8080-exec-5] c.i.c.web.controller.EmployeeController  : Error deleting employee record: Employee with ID 1 not found
+
+jakarta.persistence.EntityNotFoundException: Employee with ID 1 not found
+	at com.inventario.covid.service.impl.EmployeeServiceImpl.deleteEmployee(EmployeeServiceImpl.java:98) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.2.jar:6.1.2]
+	at com.inventario.covid.service.impl.EmployeeServiceImpl$$SpringCGLIB$$0.deleteEmployee(<generated>) ~[main/:na]
+	at com.inventario.covid.web.controller.EmployeeController.deleteEmployeeRegistered(EmployeeController.java:107) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.1.2.jar:6.1.2]
+	at com.inventario.covid.config.LoggingAspect.logMethodExecutionTime(LoggingAspect.java:54) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.2.jar:6.1.2]
+	at com.inventario.covid.web.controller.EmployeeController$$SpringCGLIB$$0.deleteEmployeeRegistered(<generated>) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-08-18T20:34:18.098-04:00  INFO 25225 --- [http-nio-8080-exec-5] c.inventario.covid.config.LoggingAspect  : Exiting method: deleteEmployeeRegistered with result: <404 NOT_FOUND Not Found,{error=The record could not be found or does not exist},[]> ,Class Name:com.inventario.covid.web.controller.EmployeeController
+2024-08-18T20:34:18.098-04:00  INFO 25225 --- [http-nio-8080-exec-5] c.inventario.covid.config.LoggingAspect  : FINISHED AOP LOGGING CONTROL...
+2024-08-18T20:34:18.098-04:00 DEBUG 25225 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2024-08-18T20:34:18.099-04:00 TRACE 25225 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{error=The record could not be found or does not exist}]
+2024-08-18T20:34:18.099-04:00 TRACE 25225 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-08-18T20:34:18.099-04:00 TRACE 25225 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-08-18T20:34:18.099-04:00 DEBUG 25225 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={Content-Type:[application/json], Transfer-Encoding:[chunked], Date:[Mon, 19 Aug 2024 00:34:18 GMT]}
+2024-08-18T20:34:28.970-04:00  INFO 25225 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-18T20:34:28.970-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2024-08-18T20:34:28.972-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2024-08-18T20:34:28.974-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2024-08-18T20:34:28.975-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2024-08-18T20:34:28.976-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2024-08-18T20:34:28.978-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2024-08-18T20:34:28.980-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2024-08-18T20:34:28.981-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.role cascade
+2024-08-18T20:34:28.983-04:00 DEBUG 25225 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2024-08-18T20:34:28.986-04:00  INFO 25225 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-18T20:34:28.988-04:00  INFO 25225 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

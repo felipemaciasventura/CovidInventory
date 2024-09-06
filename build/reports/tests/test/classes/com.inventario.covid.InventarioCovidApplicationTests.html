@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.004s</div>
+<div class="counter">0.003s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 <a name="contextLoads()"></a>
 <h3 class="failures">contextLoads()</h3>
 <span class="code">
-<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@18dd7767 testClass = com.inventario.covid.InventarioCovidApplicationTests, locations = [], classes = [com.inventario.covid.InventarioCovidApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@3c9c0d96, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@19b93fa8, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1921ad94, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4b6e2263, org.springframework.boot.test.context.SpringBootTestAnnotation@7cdf30ae], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@5b3518e1 testClass = com.inventario.covid.InventarioCovidApplicationTests, locations = [], classes = [com.inventario.covid.InventarioCovidApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@19b93fa8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1921ad94, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2631f68c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2a62b5bc, org.springframework.boot.test.context.SpringBootTestAnnotation@44dd6008], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
@@ -233,7 +233,7 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 </thead>
 <tr>
 <td class="failures">contextLoads()</td>
-<td class="failures">0.004s</td>
+<td class="failures">0.003s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -241,8 +241,8 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>22:06:54.468 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.inventario.covid.InventarioCovidApplicationTests]: InventarioCovidApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:06:54.580 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.inventario.covid.InventarioCovidApplication for test class com.inventario.covid.InventarioCovidApplicationTests
+<pre>19:07:17.984 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.inventario.covid.InventarioCovidApplicationTests]: InventarioCovidApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:07:18.029 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.inventario.covid.InventarioCovidApplication for test class com.inventario.covid.InventarioCovidApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -252,19 +252,19 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
  =========|_|==============|___/=/_/_/_/
 ?[32m :: Spring Boot :: ?[39m              ?[2m (v3.2.1)?[0;39m
 
-?[2m2024-03-05T22:06:54.976-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mc.i.c.InventarioCovidApplicationTests   ?[0;39m ?[2m:?[0;39m Starting InventarioCovidApplicationTests using Java 21.0.2 with PID 10186 (started by m4cv3n in /mnt/ntfs/FromOpenSuse/SharedCodeFedora/inventario-covid)
-?[2m2024-03-05T22:06:54.978-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mc.i.c.InventarioCovidApplicationTests   ?[0;39m ?[2m:?[0;39m No active profile set, falling back to 1 default profile: &quot;default&quot;
-?[2m2024-03-05T22:06:55.016-04:00?[0;39m ?[32mTRACE?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5baaae4c, started on Tue Mar 05 22:06:55 BOT 2024
-?[2m2024-03-05T22:06:55.615-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.s.d.r.c.RepositoryConfigurationDelegate?[0;39m ?[2m:?[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[2m2024-03-05T22:06:55.705-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.s.d.r.c.RepositoryConfigurationDelegate?[0;39m ?[2m:?[0;39m Finished Spring Data repository scanning in 78 ms. Found 3 JPA repository interfaces.
-?[2m2024-03-05T22:06:56.104-04:00?[0;39m ?[32mTRACE?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m No 'messageSource' bean, using [Empty MessageSource]
-?[2m2024-03-05T22:06:56.105-04:00?[0;39m ?[32mTRACE?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
-?[2m2024-03-05T22:06:56.249-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.hibernate.jpa.internal.util.LogHelper ?[0;39m ?[2m:?[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
-?[2m2024-03-05T22:06:56.319-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36morg.hibernate.Version                   ?[0;39m ?[2m:?[0;39m HHH000412: Hibernate ORM core version 6.4.1.Final
-?[2m2024-03-05T22:06:56.351-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.h.c.internal.RegionFactoryInitiator   ?[0;39m ?[2m:?[0;39m HHH000026: Second-level cache disabled
-?[2m2024-03-05T22:06:56.576-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.o.j.p.SpringPersistenceUnitInfo     ?[0;39m ?[2m:?[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
-?[2m2024-03-05T22:06:56.603-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mcom.zaxxer.hikari.HikariDataSource      ?[0;39m ?[2m:?[0;39m HikariPool-1 - Starting...
-?[2m2024-03-05T22:06:57.647-04:00?[0;39m ?[31mERROR?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mcom.zaxxer.hikari.pool.HikariPool       ?[0;39m ?[2m:?[0;39m HikariPool-1 - Exception during pool initialization.
+?[2m2024-06-18T19:07:18.210-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mc.i.c.InventarioCovidApplicationTests   ?[0;39m ?[2m:?[0;39m Starting InventarioCovidApplicationTests using Java 21.0.3 with PID 3972 (started by felipe in /home/felipe/Github/covidInventory)
+?[2m2024-06-18T19:07:18.211-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mc.i.c.InventarioCovidApplicationTests   ?[0;39m ?[2m:?[0;39m No active profile set, falling back to 1 default profile: &quot;default&quot;
+?[2m2024-06-18T19:07:18.232-03:00?[0;39m ?[32mTRACE?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m Refreshing org.springframework.web.context.support.GenericWebApplicationContext@19f040ba, started on Tue Jun 18 19:07:18 ART 2024
+?[2m2024-06-18T19:07:18.552-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.s.d.r.c.RepositoryConfigurationDelegate?[0;39m ?[2m:?[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[2m2024-06-18T19:07:18.581-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.s.d.r.c.RepositoryConfigurationDelegate?[0;39m ?[2m:?[0;39m Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+?[2m2024-06-18T19:07:18.772-03:00?[0;39m ?[32mTRACE?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m No 'messageSource' bean, using [Empty MessageSource]
+?[2m2024-06-18T19:07:18.772-03:00?[0;39m ?[32mTRACE?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+?[2m2024-06-18T19:07:18.861-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.hibernate.jpa.internal.util.LogHelper ?[0;39m ?[2m:?[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+?[2m2024-06-18T19:07:18.897-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36morg.hibernate.Version                   ?[0;39m ?[2m:?[0;39m HHH000412: Hibernate ORM core version 6.4.1.Final
+?[2m2024-06-18T19:07:18.912-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.h.c.internal.RegionFactoryInitiator   ?[0;39m ?[2m:?[0;39m HHH000026: Second-level cache disabled
+?[2m2024-06-18T19:07:18.999-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.o.j.p.SpringPersistenceUnitInfo     ?[0;39m ?[2m:?[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+?[2m2024-06-18T19:07:19.011-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mcom.zaxxer.hikari.HikariDataSource      ?[0;39m ?[2m:?[0;39m HikariPool-1 - Starting...
+?[2m2024-06-18T19:07:20.031-03:00?[0;39m ?[31mERROR?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mcom.zaxxer.hikari.pool.HikariPool       ?[0;39m ?[2m:?[0;39m HikariPool-1 - Exception during pool initialization.
 
 org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342) ~[postgresql-42.6.0.jar:42.6.0]
@@ -407,7 +407,7 @@ org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check t
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: java.net.ConnectException: Conexión rehusada
+Caused by: java.net.ConnectException: Connection refused
 	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
@@ -420,7 +420,7 @@ Caused by: java.net.ConnectException: Conexión rehusada
 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
 	... 139 common frames omitted
 
-?[2m2024-03-05T22:06:57.667-04:00?[0;39m ?[33m WARN?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.h.e.j.e.i.JdbcEnvironmentInitiator    ?[0;39m ?[2m:?[0;39m HHH000342: Could not obtain connection to query metadata
+?[2m2024-06-18T19:07:20.038-03:00?[0;39m ?[33m WARN?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.h.e.j.e.i.JdbcEnvironmentInitiator    ?[0;39m ?[2m:?[0;39m HHH000342: Could not obtain connection to query metadata
 
 java.lang.NullPointerException: Cannot invoke &quot;org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)&quot; because the return value of &quot;org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()&quot; is null
 	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
@@ -550,12 +550,12 @@ java.lang.NullPointerException: Cannot invoke &quot;org.hibernate.engine.jdbc.sp
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
 
-?[2m2024-03-05T22:06:57.677-04:00?[0;39m ?[31mERROR?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mj.LocalContainerEntityManagerFactoryBean?[0;39m ?[2m:?[0;39m Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-?[2m2024-03-05T22:06:57.678-04:00?[0;39m ?[33m WARN?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-?[2m2024-03-05T22:06:57.691-04:00?[0;39m ?[32m INFO?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.s.b.a.l.ConditionEvaluationReportLogger?[0;39m ?[2m:?[0;39m 
+?[2m2024-06-18T19:07:20.042-03:00?[0;39m ?[31mERROR?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mj.LocalContainerEntityManagerFactoryBean?[0;39m ?[2m:?[0;39m Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+?[2m2024-06-18T19:07:20.043-03:00?[0;39m ?[33m WARN?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.w.c.s.GenericWebApplicationContext  ?[0;39m ?[2m:?[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+?[2m2024-06-18T19:07:20.048-03:00?[0;39m ?[32m INFO?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36m.s.b.a.l.ConditionEvaluationReportLogger?[0;39m ?[2m:?[0;39m 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-?[2m2024-03-05T22:06:57.717-04:00?[0;39m ?[31mERROR?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.boot.SpringApplication              ?[0;39m ?[2m:?[0;39m Application run failed
+?[2m2024-06-18T19:07:20.055-03:00?[0;39m ?[31mERROR?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.boot.SpringApplication              ?[0;39m ?[2m:?[0;39m Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773) ~[spring-beans-6.1.2.jar:6.1.2]
@@ -693,9 +693,9 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
 	... 120 common frames omitted
 
-?[2m2024-03-05T22:06:57.730-04:00?[0;39m ?[33m WARN?[0;39m ?[35m10186?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.test.context.TestContextManager     ?[0;39m ?[2m:?[0;39m Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.inventario.covid.InventarioCovidApplicationTests@9205c0a]
+?[2m2024-06-18T19:07:20.060-03:00?[0;39m ?[33m WARN?[0;39m ?[35m3972?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[2m?[0;39m?[36mo.s.test.context.TestContextManager     ?[0;39m ?[2m:?[0;39m Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.inventario.covid.InventarioCovidApplicationTests@5fd18419]
 
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@18dd7767 testClass = com.inventario.covid.InventarioCovidApplicationTests, locations = [], classes = [com.inventario.covid.InventarioCovidApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@3c9c0d96, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@19b93fa8, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1921ad94, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4b6e2263, org.springframework.boot.test.context.SpringBootTestAnnotation@7cdf30ae], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@5b3518e1 testClass = com.inventario.covid.InventarioCovidApplicationTests, locations = [], classes = [com.inventario.covid.InventarioCovidApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@19b93fa8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1921ad94, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2631f68c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2a62b5bc, org.springframework.boot.test.context.SpringBootTestAnnotation@44dd6008], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.2.jar:6.1.2]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.2.jar:6.1.2]
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.2.jar:6.1.2]
@@ -884,7 +884,7 @@ Unconditional classes:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at Mar 5, 2024, 10:06:57 PM</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 18 Jun 2024, 19.07.20</p>
 </div>
 </div>
 </body>

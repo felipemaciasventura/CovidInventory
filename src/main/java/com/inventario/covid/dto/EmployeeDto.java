@@ -20,7 +20,7 @@ public class EmployeeDto extends EmployeeVaccineDto implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
-    private String role;
+    private String roleName;
     private LocalDate birthDate = null;
     private String address = null;
     private String cellPhone = null;

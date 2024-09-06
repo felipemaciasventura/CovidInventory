@@ -1,19 +1,18 @@
 package com.inventario.covid.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
-@ToString
+@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "employee", schema = "public")
 @Entity
@@ -45,9 +44,6 @@ public class EmployeeEntity implements Serializable {
     @Column(name="email", nullable = false,  columnDefinition = "varchar(50)")
     private String email;
 
-    @Column(name = "role", nullable = false)
-    private String role;
-
     @Column(name = "registration_complete",nullable = false, columnDefinition = "boolean default false")
     private Boolean isRegComplete = false;
 
@@ -63,5 +59,8 @@ public class EmployeeEntity implements Serializable {
 
     @Column(name = "vaccine_application", nullable = false, columnDefinition = "boolean default false")
     private Boolean isVaccineApplied = false;
+
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<EmployeeRoleEntity> employeeRolesEntity = new HashSet<>();
 
 }

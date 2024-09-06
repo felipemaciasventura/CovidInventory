@@ -39,6 +39,9 @@ public class EmployeeRegisterRequest implements Serializable {
     @Email(message = "The email field must contain a valid address", flags={Pattern.Flag.CASE_INSENSITIVE})
     private String email;
 
+    @NotEmpty(message = "The role field is required")
+    private String roleName;
+
     public EmployeeDto toDto(){
         EmployeeDto employeeDto = new EmployeeDto();
         BeanUtils.copyProperties(this, employeeDto);

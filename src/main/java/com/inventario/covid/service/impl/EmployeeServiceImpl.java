@@ -8,7 +8,10 @@ import com.inventario.covid.dto.EmployeeVaccineDto;
 import com.inventario.covid.exceptions.UserServiceException;
 import com.inventario.covid.mapper.EmployeeMapper;
 import com.inventario.covid.model.EmployeeEntity;
+import com.inventario.covid.model.EmployeeRoleEntity;
+import com.inventario.covid.model.RoleEntity;
 import com.inventario.covid.repository.EmployeeRepository;
+import com.inventario.covid.repository.RoleRepository;
 import com.inventario.covid.service.IEmployeeService;
 import com.inventario.covid.web.io.model.response.ResponseAllEmployeesRegistered;
 import jakarta.persistence.EntityNotFoundException;
@@ -33,14 +36,16 @@ public class EmployeeServiceImpl implements IEmployeeService {
     private final Utils utils;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
     private final EmployeeRepository employeeRepository;
+    private final RoleRepository roleRepository;
 
     private static final EmployeeMapper employeeMapper = EmployeeMapper.INSTANCE;
 
     @Autowired
-    public EmployeeServiceImpl(Utils utils, BCryptPasswordEncoder bCryptPasswordEncoder, EmployeeRepository employeeRepository) {
+    public EmployeeServiceImpl(Utils utils, BCryptPasswordEncoder bCryptPasswordEncoder, EmployeeRepository employeeRepository, RoleRepository roleRepository) {
         this.utils = utils;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
         this.employeeRepository = employeeRepository;
+        this.roleRepository = roleRepository;
     }
 
     @Override
@@ -57,7 +62,12 @@ public class EmployeeServiceImpl implements IEmployeeService {
         String passwordNoEncode = utils.generatePassword(10);
         logger.info("passwordNoEncode" + passwordNoEncode);
         newUser.setPassword(bCryptPasswordEncoder.encode(passwordNoEncode));
-        newUser.setRole("employee");
+        RoleEntity role = roleRepository.findByRoleName(employeeDto.getRoleName())
+                .orElseThrow(() -> new RuntimeException("Role not found"));
+        EmployeeRoleEntity employeeRole = new EmployeeRoleEntity();
+        employeeRole.setEmployee(newUser);
+        employeeRole.setRole(role);
+        newUser.getEmployeeRolesEntity().add(employeeRole);
         return newUser;
     }
 
@@ -96,16 +106,18 @@ public class EmployeeServiceImpl implements IEmployeeService {
         if(employeeEntity == null){
             throw new UserServiceException(ErrorMessages.RECORD_NOT_FOUND_EXCEPTION.getErrorMessage());
         }
-        employeeEntity.setFirstName(employeeDto.getFirstName());
+        /*employeeEntity.setFirstName(employeeDto.getFirstName());
         employeeEntity.setLastName(employeeDto.getLastName());
         employeeEntity.setEmail(employeeDto.getEmail());
         employeeEntity.setAddress(employeeDto.getAddress());
-        employeeEntity.setCellPhone(employeeDto.getCellPhone());
+        employeeEntity.setCellPhone(employeeDto.getCellPhone());*/
+        employeeMapper.updateEmployeeFromDto(employeeDto, employeeEntity);
 
         EmployeeEntity updateEmployeeDetails = employeeRepository.save(employeeEntity);
-        EmployeeDto returnValue = new EmployeeDto();
-        BeanUtils.copyProperties(updateEmployeeDetails, returnValue);
-        return returnValue;
+
+        /*EmployeeDto returnValue = new EmployeeDto();
+        BeanUtils.copyProperties(updateEmployeeDetails, returnValue);*/
+        return employeeMapper.employeeEntityToDto(updateEmployeeDetails);
     }
 
     @Override
@@ -120,12 +132,21 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     @Override
+    public EmployeeDto updateEmployeeFromEmployee(Long idEmployee, EmployeeDto employeeDto) throws UserServiceException {
+
+        EmployeeEntity employeeEntity = employeeRepository.findById(idEmployee);
+        if (employeeEntity == null) {
+            throw new UserServiceException(ErrorMessages.RECORD_NOT_FOUND_EXCEPTION.getErrorMessage());
+        }
+        employeeMapper.INSTANCE.updateEmployeeFromDto(employeeDto, employeeEntity);
+        employeeEntity.setIsRegComplete(true);
+        EmployeeEntity updateEmployeeDetails = employeeRepository.save(employeeEntity);
+        return EmployeeMapper.INSTANCE.employeeEntityToDto(updateEmployeeDetails);
+    }
+
+    @Override
     public EmployeeDto updateEmployeeForEmployee(Long idEmployee, Long idVaccine, EmployeeDto employeeDto, EmployeeVaccineDto employeeVaccineDto) throws UserServiceException {
         return null;
     }
 
-    @Override
-    public EmployeeDto updateEmployeeFromEmployee(Long idEmployee, EmployeeDto employeeDto) throws UserServiceException {
-        return null;
-    }
 }

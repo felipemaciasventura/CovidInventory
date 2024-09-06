@@ -15,6 +15,7 @@ public interface IEmployeeService {
     void deleteEmployee(Long id);
     EmployeeDto updateEmployeeForAdmin(Long id, EmployeeDto employeeDto) throws UserServiceException;
     ResponseAllEmployeesRegistered getEmployeeByEmployeeId(Long id)throws UserServiceException;
+
     EmployeeDto updateEmployeeForEmployee(Long idEmployee, Long idVaccine, EmployeeDto employeeDto, EmployeeVaccineDto employeeVaccineDto) throws UserServiceException;
     EmployeeDto updateEmployeeFromEmployee(Long idEmployee, EmployeeDto employeeDto) throws UserServiceException;
 }

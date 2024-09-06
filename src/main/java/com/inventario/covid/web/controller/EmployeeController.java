@@ -4,7 +4,9 @@ import com.inventario.covid.config.ErrorMessages;
 import com.inventario.covid.config.SuccessMessages;
 import com.inventario.covid.dto.EmployeeDto;
 import com.inventario.covid.exceptions.UserServiceException;
+import com.inventario.covid.mapper.EmployeeMapper;
 import com.inventario.covid.service.IEmployeeService;
+import com.inventario.covid.web.io.model.request.EmployeeCompleteRegisterRequest;
 import com.inventario.covid.web.io.model.request.EmployeeRegisterRequest;
 import com.inventario.covid.web.io.model.request.EmployeeUpdateRequest;
 import com.inventario.covid.web.io.model.response.EmployeeRegisterResponse;
@@ -138,11 +140,12 @@ public class EmployeeController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity<Object> updateEmployeeForAdmin(@Valid @RequestBody EmployeeUpdateRequest newEmployee, BindingResult result, @PathVariable Long id){
-        EmployeeRegisterResponse returnValue = new EmployeeRegisterResponse();
         logger.debug("Updating employee with id: {}", id);
         Map<String, Object> responseUpdateEmployee = new HashMap<>();
-        var employeeDto = new EmployeeDto();
-        BeanUtils.copyProperties(newEmployee, employeeDto);
+
+        var employeeDto = EmployeeMapper.INSTANCE.updateRequestToDto(newEmployee);
+        //var employeeDto = new EmployeeDto();
+        //BeanUtils.copyProperties(newEmployee, employeeDto);
 
         if (result.hasErrors()){
             List<String> errors = result.getFieldErrors()
@@ -155,7 +158,12 @@ public class EmployeeController {
         }
         try {
             EmployeeDto updateEmployee = employeeService.updateEmployeeForAdmin(id, employeeDto);
-            BeanUtils.copyProperties(updateEmployee, returnValue);
+            EmployeeRegisterResponse returnValue = new EmployeeRegisterResponse();
+            //BeanUtils.copyProperties(updateEmployee, returnValue);
+            returnValue = EmployeeMapper.INSTANCE.dtoToRegisterResponse(updateEmployee);
+            responseUpdateEmployee.put("message", "Employee updated successfully");
+            responseUpdateEmployee.put("employee", returnValue);
+            return new ResponseEntity<>(responseUpdateEmployee, HttpStatus.CREATED);
         } catch (DataAccessException exception){
             responseUpdateEmployee.put("message", ErrorMessages.GENERIC_ERROR_LOGGER_SERVICE.getErrorMessage());
             responseUpdateEmployee.put("error", exception.getMessage() + ": " + exception.getMostSpecificCause().getMessage());
@@ -166,8 +174,31 @@ public class EmployeeController {
             logger.error("Exception during employee update: {}", exception.getMessage(), exception);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseUpdateEmployee);
         }
-        responseUpdateEmployee.put("message", "Employee updated successfully");
-        responseUpdateEmployee.put("employee", returnValue);
-        return new ResponseEntity<>(responseUpdateEmployee, HttpStatus.CREATED);
     }
+
+    /*@PutMapping("/employee/update-registration/{idEmployee}/{idVaccine}")
+    public ResponseEntity<Object> updateEmployeeFromEmployee(
+            @Valid @RequestBody EmployeeCompleteRegisterRequest registeredEmployee,
+            @PathVariable Long idEmployee,
+            @PathVariable Long idVaccine,
+            BindingResult result) {
+        logger.debug("Updating employee with id: {}", idEmployee);
+        Map<String, Object> responseUpdateEmployeeFromEmployee = new HashMap<>();
+
+        if (result.hasErrors()) {
+            List<String> errors = result.getFieldErrors()
+                    .stream()
+                    .map(DefaultMessageSourceResolvable::getDefaultMessage)
+                    .collect(Collectors.toList());
+            responseUpdateEmployeeFromEmployee.put("errors", errors);
+            return new ResponseEntity<>(responseUpdateEmployeeFromEmployee, HttpStatus.BAD_REQUEST);
+        }
+        try {
+            EmployeeDto employeeDto = EmployeeMapper.INSTANCE.updateRequestToDto(registeredEmployee);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }*/
 }
