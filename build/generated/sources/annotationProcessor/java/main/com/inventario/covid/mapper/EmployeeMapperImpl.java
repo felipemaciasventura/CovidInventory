@@ -10,7 +10,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-06-19T15:14:15-0300",
+    date = "2025-05-19T21:50:48+0000",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.5.jar, environment: Java 21.0.3 (N/A)"
 )
 public class EmployeeMapperImpl implements EmployeeMapper {

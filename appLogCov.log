@@ -1,0 +1,127 @@
+2025-05-20T21:54:33.647Z  INFO 5916 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Starting InventarioCovidApplication using Java 21.0.3 with PID 5916 (/home/user/CovidInventory/build/classes/java/main started by user in /home/user/CovidInventory)
+2025-05-20T21:54:33.651Z DEBUG 5916 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2025-05-20T21:54:33.654Z  INFO 5916 --- [restartedMain] c.i.covid.InventarioCovidApplication     : The following 1 profile is active: "dev"
+2025-05-20T21:54:33.799Z  INFO 5916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-20T21:54:33.886Z  INFO 5916 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file '/home/user/CovidInventory/compose.yaml'
+2025-05-20T21:54:35.415Z  INFO 5916 --- [restartedMain] .s.b.d.c.l.DockerComposeLifecycleManager : There are already Docker Compose services running, skipping startup
+2025-05-20T21:54:37.223Z  INFO 5916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-20T21:54:37.477Z  INFO 5916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 223 ms. Found 4 JPA repository interfaces.
+2025-05-20T21:54:38.758Z  INFO 5916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-20T21:54:38.780Z  INFO 5916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-20T21:54:38.786Z  INFO 5916 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2025-05-20T21:54:38.860Z  INFO 5916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-20T21:54:38.862Z  INFO 5916 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3430 ms
+2025-05-20T21:54:38.918Z DEBUG 5916 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2025-05-20T21:54:38.919Z DEBUG 5916 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2025-05-20T21:54:39.297Z  INFO 5916 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-20T21:54:39.417Z  INFO 5916 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-05-20T21:54:39.474Z  INFO 5916 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-20T21:54:39.959Z  INFO 5916 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-20T21:54:40.012Z  INFO 5916 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-20T21:54:40.422Z  INFO 5916 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75845bc6
+2025-05-20T21:54:40.437Z  INFO 5916 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-20T21:54:42.606Z  INFO 5916 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-20T21:54:42.634Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2025-05-20T21:54:42.648Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.648Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2025-05-20T21:54:42.651Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2025-05-20T21:54:42.654Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.655Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_role" does not exist, skipping
+2025-05-20T21:54:42.656Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2025-05-20T21:54:42.660Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.660Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2025-05-20T21:54:42.661Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2025-05-20T21:54:42.671Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.672Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "employee_vaccine" does not exist, skipping
+2025-05-20T21:54:42.672Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2025-05-20T21:54:42.679Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.679Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee" does not exist, skipping
+2025-05-20T21:54:42.679Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2025-05-20T21:54:42.686Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.686Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_role" does not exist, skipping
+2025-05-20T21:54:42.687Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2025-05-20T21:54:42.688Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.688Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "employee_vaccine" does not exist, skipping
+2025-05-20T21:54:42.688Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.role cascade
+2025-05-20T21:54:42.695Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.695Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "role" does not exist, skipping
+2025-05-20T21:54:42.695Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2025-05-20T21:54:42.699Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-05-20T21:54:42.699Z  WARN 5916 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "vaccine" does not exist, skipping
+2025-05-20T21:54:42.725Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : create table public.employee (birth_date date, registration_complete boolean default false not null, vaccine_application boolean default false not null, id bigserial not null, address varchar(50), cell_phone varchar(8), dni varchar(10) not null unique, email varchar(50) not null, first_name varchar(70) not null, last_name varchar(70) not null, password varchar(255) not null, username varchar(40) not null unique, primary key (id))
+2025-05-20T21:54:42.762Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_role (employee_id bigint not null, id bigserial not null, role_id bigint not null, primary key (id))
+2025-05-20T21:54:42.780Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : create table public.employee_vaccine (application_date date, applied_dose integer, employee_id bigint not null, id bigserial not null, vaccine_id bigint not null, primary key (id))
+2025-05-20T21:54:42.790Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : create table public.role (id bigserial not null, role_name varchar(13) not null unique, primary key (id))
+2025-05-20T21:54:42.802Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : create table public.vaccine (dosses integer, id bigserial not null, vaccine_type varchar(30), primary key (id))
+2025-05-20T21:54:42.812Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FKo7rvk7ejtx29vru9cyhf7o68a foreign key (employee_id) references public.employee
+2025-05-20T21:54:42.818Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_role add constraint FK7jol9jrbtlt6ctiehegh6besp foreign key (role_id) references public.role
+2025-05-20T21:54:42.834Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKn9flg2v6mhpryqjmf6ftyf2c5 foreign key (employee_id) references public.employee
+2025-05-20T21:54:42.844Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : alter table if exists public.employee_vaccine add constraint FKgbcyxesx6vuma0v5im5q72e07 foreign key (vaccine_id) references public.vaccine
+2025-05-20T21:54:42.857Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Sputnik')
+2025-05-20T21:54:42.864Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'AstraZeneca')
+2025-05-20T21:54:42.872Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (2,'Pfizer')
+2025-05-20T21:54:42.876Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : insert into vaccine(dosses, vaccine_type) values (1,'Jhonson&Jhonson')
+2025-05-20T21:54:42.882Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Administrator')
+2025-05-20T21:54:42.886Z DEBUG 5916 --- [restartedMain] org.hibernate.SQL                        : insert into role(role_name) values('Employee')
+2025-05-20T21:54:42.904Z  INFO 5916 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-20T21:54:43.999Z  WARN 5916 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-20T21:54:44.136Z TRACE 5916 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.EmployeeController:
+	{PUT [/api/v2/employee/update/{id}]}: updateEmployeeForAdmin(EmployeeUpdateRequest,BindingResult,Long)
+	{POST [/api/v2/employee/register]}: createEmployee(EmployeeRegisterRequest,BindingResult)
+	{GET [/api/v2/employee/employees]}: indexEmployees(int,int)
+	{DELETE [/api/v2/employee/delete/{id}]}: deleteEmployeeRegistered(Long)
+	{GET [/api/v2/employee/employee/{id}]}: getEmployeeById(Long)
+2025-05-20T21:54:44.170Z TRACE 5916 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.i.c.w.c.VaccineController:
+	{GET [/api/v2/vaccine/index]}: index()
+2025-05-20T21:54:44.185Z TRACE 5916 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2025-05-20T21:54:44.198Z DEBUG 5916 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2025-05-20T21:54:44.234Z DEBUG 5916 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-05-20T21:54:44.419Z TRACE 5916 --- [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-05-20T21:54:44.444Z TRACE 5916 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-05-20T21:54:44.444Z TRACE 5916 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-05-20T21:54:44.447Z DEBUG 5916 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-20T21:54:44.557Z DEBUG 5916 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-20T21:54:44.624Z DEBUG 5916 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-20T21:54:44.861Z  INFO 5916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-20T21:54:44.921Z  INFO 5916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-05-20T21:54:44.949Z  INFO 5916 --- [restartedMain] c.i.covid.InventarioCovidApplication     : Started InventarioCovidApplication in 12.305 seconds (process running for 13.574)
+2025-05-20T21:58:16.265Z  INFO 5916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-20T21:58:16.266Z  INFO 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-20T21:58:16.266Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@4e305c07
+2025-05-20T21:58:16.267Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@5b15fd37
+2025-05-20T21:58:16.267Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@3f7e7b64
+2025-05-20T21:58:16.281Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2025-05-20T21:58:16.291Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2025-05-20T21:58:16.291Z DEBUG 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2025-05-20T21:58:16.292Z  INFO 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2025-05-20T21:58:16.394Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}, headers={host:[127.0.0.1:8080], user-agent:[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0], accept:[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7], accept-encoding:[gzip, deflate, br, zstd], accept-language:[es,en-US;q=0.9,en;q=0.8,es-ES;q=0.7], priority:[u=0, i], referer:[https://studio.firebase.google.com/], sec-ch-ua:["Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"], sec-ch-ua-arch:["x86"], sec-ch-ua-bitness:["64"], sec-ch-ua-form-factors:["Desktop"], sec-ch-ua-full-version:["138.0.3309.2"], sec-ch-ua-full-version-list:["Not)A;Brand";v="8.0.0.0", "Chromium";v="138.0.7164.0", "Microsoft Edge";v="138.0.3309.2"], sec-ch-ua-mobile:[?0], sec-ch-ua-model:[""], sec-ch-ua-platform:["Linux"], sec-ch-ua-platform-version:["6.14.6"], sec-ch-ua-wow64:[?0], sec-fetch-dest:[iframe], sec-fetch-mode:[navigate], sec-fetch-site:[cross-site], sec-fetch-storage-access:[active], sec-user-ip:[10.20.20.201], upgrade-insecure-requests:[1], x-forwarded-host:[8080-idx-covidinventory-1744346339793.cluster-etsqrqvqyvd4erxx7qq32imrjk.cloudworkstations.dev], x-goog-workstations-endpoint:[workstations-40e1de83-4973-448e-9d95-e5c5d302de5e.southamerica-west1-b.c.monospace-5.internal.:980]} in DispatcherServlet 'dispatcherServlet'
+2025-05-20T21:58:16.472Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]] and 4 interceptors
+2025-05-20T21:58:16.555Z DEBUG 5916 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-05-20T21:58:16.585Z DEBUG 5916 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .]
+2025-05-20T21:58:16.589Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2025-05-20T21:58:16.595Z DEBUG 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={Vary:[Origin, Access-Control-Request-Method, Access-Control-Request-Headers], Vary:[Origin, Access-Control-Request-Method, Access-Control-Request-Headers], Vary:[Origin, Access-Control-Request-Method, Access-Control-Request-Headers]}
+2025-05-20T21:58:16.643Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={host:[127.0.0.1:8080], user-agent:[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0], accept:[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7], accept-encoding:[gzip, deflate, br, zstd], accept-language:[es,en-US;q=0.9,en;q=0.8,es-ES;q=0.7], priority:[u=0, i], referer:[https://studio.firebase.google.com/], sec-ch-ua:["Not)A;Brand";v="8", "Chromium";v="138", "Microsoft Edge";v="138"], sec-ch-ua-arch:["x86"], sec-ch-ua-bitness:["64"], sec-ch-ua-form-factors:["Desktop"], sec-ch-ua-full-version:["138.0.3309.2"], sec-ch-ua-full-version-list:["Not)A;Brand";v="8.0.0.0", "Chromium";v="138.0.7164.0", "Microsoft Edge";v="138.0.3309.2"], sec-ch-ua-mobile:[?0], sec-ch-ua-model:[""], sec-ch-ua-platform:["Linux"], sec-ch-ua-platform-version:["6.14.6"], sec-ch-ua-wow64:[?0], sec-fetch-dest:[iframe], sec-fetch-mode:[navigate], sec-fetch-site:[cross-site], sec-fetch-storage-access:[active], sec-user-ip:[10.20.20.201], upgrade-insecure-requests:[1], x-forwarded-host:[8080-idx-covidinventory-1744346339793.cluster-etsqrqvqyvd4erxx7qq32imrjk.cloudworkstations.dev], x-goog-workstations-endpoint:[workstations-40e1de83-4973-448e-9d95-e5c5d302de5e.southamerica-west1-b.c.monospace-5.internal.:980]} in DispatcherServlet 'dispatcherServlet'
+2025-05-20T21:58:16.654Z TRACE 5916 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error], produces [text/html]}, { [/error]}]
+2025-05-20T21:58:16.663Z TRACE 5916 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-05-20T21:58:16.728Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@36993bab, org.apache.catalina.connector.ResponseFacade@6128df65]
+2025-05-20T21:58:16.804Z TRACE 5916 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2025-05-20T21:58:16.848Z DEBUG 5916 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-05-20T21:58:16.849Z TRACE 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView@32448e03] 
+2025-05-20T21:58:16.911Z DEBUG 5916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={Vary:[Origin, Access-Control-Request-Method, Access-Control-Request-Headers], Vary:[Origin, Access-Control-Request-Method, Access-Control-Request-Headers], Vary:[Origin, Access-Control-Request-Method, Access-Control-Request-Headers]}
+2025-05-20T21:58:23.425Z  INFO 5916 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-20T21:58:23.437Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FKo7rvk7ejtx29vru9cyhf7o68a
+2025-05-20T21:58:23.485Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_role drop constraint if exists FK7jol9jrbtlt6ctiehegh6besp
+2025-05-20T21:58:23.498Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKn9flg2v6mhpryqjmf6ftyf2c5
+2025-05-20T21:58:23.512Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists public.employee_vaccine drop constraint if exists FKgbcyxesx6vuma0v5im5q72e07
+2025-05-20T21:58:23.532Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee cascade
+2025-05-20T21:58:23.555Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_role cascade
+2025-05-20T21:58:23.580Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.employee_vaccine cascade
+2025-05-20T21:58:23.607Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.role cascade
+2025-05-20T21:58:23.632Z DEBUG 5916 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists public.vaccine cascade
+2025-05-20T21:58:23.679Z  INFO 5916 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-20T21:58:23.711Z  INFO 5916 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
